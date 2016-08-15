@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Check Brackets</title></head>
+</html>
+<body>
+<script>
+function checkBrackets(str){
+  var depth = 0;
+   for (var i in str){
+    if (str[i] =='(' ){
+	depth ++;
+	}else if (str[i]==')'){
+	depth --;
+	}
+	if (depth <0) return "incorrect";
+	
+	}
+	if (depth > 0) return "incorrect";
+	else return "correct";
+	}
+	console.log(checkBrackets('( (a+b)/5 abd)'));
+	console.log(checkBrackets(')(a+b) )'));
+	console.log(checkBrackets('(b*(c+d*2/(2+(12 abc / (a+3))))'));
+
+</script>
+</body>
+</html>
