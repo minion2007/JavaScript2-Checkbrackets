@@ -8,13 +8,18 @@ function checkBrackets(str){
   var depth = 0;
    for (var i in str){
     if (str[i] =='(' ){
+	// if the char is an opening parenthesis then we increase the depth
 	depth ++;
 	}else if (str[i]==')'){
+	// if the char is a closing parenthesis then we decrease the depth
 	depth --;
 	}
+	//if the depth is negative we have cosing parenthesis
+	//before any matching opening parenthesis
 	if (depth <0) return "incorrect";
 	
 	}
+	//if the depth is not null then a closing parenthesis is missing
 	if (depth > 0) return "incorrect";
 	else return "correct";
 	}
